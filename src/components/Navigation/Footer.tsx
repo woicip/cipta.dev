@@ -10,7 +10,7 @@ export default function Footer(props: any){
     const localTime = useLocalTime() as any
 
     return (
-        <div className="mt-[100px] py-[100px] px-[400px]">
+        <div className="mt-[100px] py-[100px] px-[400px] laptopM:px-[100px]">
             <div className="flex items-start justify-between">
                 <div>
                     <Image src={logoBlack} alt="logo" />
@@ -21,13 +21,14 @@ export default function Footer(props: any){
                     <div>
                         <h1 className="text-black font-medium mb-[20px]">Contact</h1>
                         <Link href="https://wa.me/6285782210951?text=%22Hello! I'm here to saying hi 🖐%22" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">WhatsApp</Link>
-                        <Link href="imessage://hello@linusrogge.com" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">iMessage</Link>
+                        <Link href="imessage://woicipta@gmail.com" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">iMessage</Link>
                         <Link href="https://t.me/travisfr" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">Telegram</Link>
                     </div>
 
                     <div>
                         <h1 className="text-black font-medium mb-[20px]">Social</h1>
                         <Link href="https://linkedin.com/in/gunawan-cipta-22a25621a" target='_blank' className="mb-[5px] block hover:underline transition-all text-[15px] font-light text-[#8A8A8A]">LinkedIn</Link>
+                        <Link href="https://threads.net/woicip" target='_blank' className="mb-[5px] block hover:underline transition-all text-[15px] font-light text-[#8A8A8A]">Threads</Link>
                         <Link href="https://twitter.com/woicipta" target='_blank' className="mb-[5px] block hover:underline transition-all text-[15px] font-light text-[#8A8A8A]">Twitter</Link>
                         <Link href="https://github.com/woicip" target='_blank' className="mb-[5px] block hover:underline transition-all text-[15px] font-light text-[#8A8A8A]">GitHub</Link>
                     </div>

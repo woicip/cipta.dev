@@ -3,9 +3,9 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 // components
-import Navigation from "../components/Navigation/Navigation";
 import Project from "@/components/Projects/Project";
 import Footer from "@/components/Navigation/Footer";
+import CallToAction from "@/components/Navigation/CallToAction";
 
 // assets
 import ctaIcon from '@/assets/icons/cta.svg'
@@ -19,8 +19,8 @@ import tailwind from '@/assets/techs/tailwindcss.svg'
 export default function Index(){
     return (
         <motion.main 
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="w-full h-full">
             <Head>
@@ -35,10 +35,8 @@ export default function Index(){
             </Head>
             
             <AnimatePresence>
-                <Navigation />
-                
                 <main className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] flex items-start justify-between">
+                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] flex items-start justify-between">
                         <h1 className="text-[40px]">Passionate Full Stack <br/>Designer.</h1>
 
                         <div>
@@ -47,19 +45,23 @@ export default function Index(){
                                 who like to code, design & building products. <br/>
                                 Based in Indonesia.
                             </p>
-                            <div className="mt-[20px] flex items-center">
+                            <motion.button 
+                                whileTap={{ scale: 0.8 }}
+                                transition={{ duration: 0.1, type: "spring" }} 
+                                className="w-fit mt-[20px] py-[7px] px-[10px] flex items-center rounded-xl hover:bg-[#f0f0f0] transition-all cursor-pointer"
+                                onClick={() => window.location.href = "#ready?"}>
                                 <Image src={ctaIcon} alt="icon" />
                                 <span className="ml-[10px] font-normal">Let's Talk</span>
-                            </div>
+                            </motion.button>
                         </div>
                     </div>
 
-                    <div className="px-[300px] pb-[100px] grid grid-cols-2 gap-5">
-                        <Project name="Rabfire" sub="Social media platform, 2023." work="Front End Development" link="/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} />
-                        <Project name="ASCORP" sub="Company Profile, 2022." work="Front End Development" link="/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} />
+                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] grid grid-cols-2 gap-5">
+                        <Project name="Rabfire" sub="Social media platform, 2023." work="Front End Development" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
+                        <Project name="ASCORP" sub="Company Profile, 2022." work="Front End Development" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>
 
-                    <div className="py-[150px] px-[300px] flex flex-col items-center justify-center">
+                    <div className="py-[150px] px-[300px] laptopM:px-[100px] flex flex-col items-center justify-center">
                         <h1 className="text-[40px] font-normal text-center">Unlock your potential with<br/> diverse services</h1>
                         <div className="mt-[70px] grid grid-cols-3 gap-5">
                             <div className="p-[40px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#f3f3f3] to-transparent">
@@ -79,14 +81,7 @@ export default function Index(){
                         </div>
                     </div>
 
-                    <div className="w-full h-full mt-[100px] py-[150px] flex flex-col items-center justify-center rounded-t-[100px] bg-gradient-to-b from-[#F0F0F0] to-transparent">
-                        <h1 className="text-[40px] text-center">Ready to take <br/> your ideas into reality ?</h1>
-                        <div className="mt-[50px] grid grid-cols-2 gap-4">
-                            <motion.button whileHover={{ scale: 1.2 }} onHoverStart={e => {}} onHoverEnd={e => {}} className="px-[40px] py-[15px] rounded-full bg-[#333333] text-white">Discuss Project</motion.button>
-                            <button className="px-[30px] py-[15px] rounded-full bg-[#ECECEC] text-[#333333]">Write Email</button>
-                        </div>
-                    </div>
-
+                    <CallToAction />
                     <Footer />
                 </main>
              </AnimatePresence>

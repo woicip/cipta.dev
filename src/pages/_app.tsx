@@ -7,6 +7,9 @@ import {
 } from '@tanstack/react-query'
 import React from 'react'
 
+// components
+import Navigation from '@/components/Navigation/Navigation'
+
 
 export default function App({ Component, pageProps }: AppProps) {
   const [ queryClient ] = React.useState(() => new QueryClient())
@@ -14,7 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <div>
+          <Navigation />
+          <Component {...pageProps} />
+        </div>
       </Hydrate>
     </QueryClientProvider>
   )
