@@ -42,10 +42,10 @@ export default function Index(){
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
                             <p className="font-light text-[16px] leading-normal">
                                 Halo, I'm Gunawan Cipta. Full Stack Designer <br className="mobileL:hidden" />
-                                who like to code, design & building products. <br className="mobileL:hidden" />
+                                who like to code, design & building digital products. <br className="mobileL:hidden" />
                                 Based in Indonesia.
                             </p>
-                            
+
                             <motion.button 
                                 whileTap={{ scale: 0.8 }}
                                 transition={{ duration: 0.1, type: "spring" }} 
