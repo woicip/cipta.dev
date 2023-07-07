@@ -7,7 +7,7 @@ import CallToAction from "@/components/Navigation/CallToAction"
 
 function Separate(){
     return (
-        <div className="px-[50px]">
+        <div className="px-[50px] tabletM:px-[20px]">
             <div className="w-[2px] h-[100px] bg-[#F1F1F1]"></div>
         </div>
     )
@@ -27,17 +27,17 @@ function Thread(props: any){
     const { day, date, title } = props;
 
     return (
-        <div className="h-full px-[50px] grid grid-cols-[40px_1fr] gap-5">
+        <div className="h-full px-[50px] tabletM:pr-0 tabletM:px-[20px] grid grid-cols-[40px_1fr] gap-5 laptopM:gap-2 tabletM:gap-0">
             <div className="h-full relative">
                 <div className="w-[10px] h-[10px] bg-[#555555] absolute rounded-full top-[20px] left-[-4px]"></div>
                 <div className="w-[2px] h-full bg-[#F1F1F1]"></div>
             </div>
 
-            <div className="grid grid-cols-[140px_1fr] gap-5">
-                <p className="text-[14px] text-[#5f5f5f]">{day} <br/> {date}</p>
-                <div className="pb-[150px]">
-                    <h1 className="font-medium text-[20px]">{title}</h1>
-                    <p className="w-[500px] mt-[30px] text-[#767676] text-[15px] leading-relaxed">{props.children}</p>
+            <div className="grid grid-cols-[140px_1fr] tabletL:grid-cols-1 gap-5 laptopM:gap-2">
+                <p className="text-[14px] text-[#797979]">{day} <br/> {date}</p>
+                <div className="w-full pb-[150px] tabletL:mt-[20px]">
+                    <h1 className="text-[20px]">{title}</h1>
+                    <p className="w-[500px] laptopS:w-full mt-[30px] tabletL:mt-[15px] text-[#767676] text-[15px] leading-relaxed">{props.children}</p>
                 </div>
             </div>
         </div>
@@ -46,9 +46,9 @@ function Thread(props: any){
 
 function End(){
     return (
-        <div className="h-full px-[50px] grid grid-cols-[40px_1fr] gap-5">
+        <div className="h-full px-[50px] tabletM:px-[20px] grid grid-cols-[40px_1fr] gap-5">
             <div className="h-full relative">
-                <div className="px-[20px] py-[12px] bg-[#F1F1F1] absolute rounded-full left-[-45px] whitespace-nowrap">
+                <div className="px-[20px] py-[12px] bg-[#F1F1F1] absolute rounded-full left-[-45px] tabletM:left-[-30px] whitespace-nowrap">
                     <p className="text-[14px]">The end</p>
                 </div>
                 <div className="w-[2px] h-[300px] border border-dashed"></div>
@@ -77,13 +77,13 @@ export default function Timeline(props: any){
 
             <AnimatePresence>
                 <div className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] flex items-center justify-between">
+                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] flex items-start justify-between">
                         <div>
-                            <h1 className="text-[40px]">What you do in life,<br/>echoes in eternity.</h1>
-                            <p className="mt-[20px] text-[13px] italic font-light text-[#A3A3A3]">- Marcus Aurelius</p>
+                            <h1 className="text-[40px]">What you do in life,<br className="tabletM:hidden"/> echoes in eternity.</h1>
+                            <p className="mt-[20px] tabletM:mt-[10px] text-[13px] italic font-light text-[#A3A3A3]">- Marcus Aurelius</p>
                         </div>
 
-                        <div>
+                        <div className="mt-[20px]">
                             <p className="font-light text-[16px] leading-normal">
                                 A place where you can see what I'm <br/>
                                 working on and my random life updates.
@@ -91,7 +91,7 @@ export default function Timeline(props: any){
                         </div>
                     </div>
 
-                    <div className="px-[450px] laptopM:px-[200px]">
+                    <div className="px-[450px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px]">
                         <YearSeparator year={2023} />
                         <Separate />
                         <Thread day="Tuesday" date="June 27, 2023" title="New Website Design Update! 2.0 🎉">

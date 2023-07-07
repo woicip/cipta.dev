@@ -26,13 +26,17 @@ export default function Navigation(props: any){
 
     const router = useRouter()
 
+    const { openMenu, setOpenMenu } = props;
+
     return (
-        <div className="w-full py-[30px] px-[300px] laptopM:px-[100px] flex items-center justify-between bg-gradient-to-b from-white to-transparent fixed top-0 z-[100]">
-            <Link href="/">
+        <div className="w-full py-[30px] px-[300px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] tabletM:px-[30px] mobileL:px-[20px] flex items-center justify-between bg-gradient-to-b from-white to-transparent fixed top-0 z-[10]">
+            <Link href="/" className="">
                 <Image src={logo} alt="logo" />
             </Link>
 
-            <motion.div className="flex items-center">
+            <button className="hidden tabletM:block text-[14px]" onClick={() => setOpenMenu(!openMenu)}>Menu</button>
+
+            <motion.div className="flex items-center tabletM:hidden">
                 <div className="w-fit block mr-[70px]">
                     <Link href="/" className="w-full text-[14px]">Home</Link>
                     { router.pathname === '/' ? <motion.div layoutId='underline' className="w-full h-[1px] bg-[#333333]"></motion.div> : <div className="h-[1px] bg-transparent"></div> }

@@ -48,8 +48,8 @@ export default function Timeline(props: any){
                     </div>
 
                     <div className="px-[300px] pb-[100px] laptopM:px-[100px] grid grid-cols-2 gap-5">
-                        <Project name="Rabfire" sub="Social media platform, 2023." work="Front End Development" link="/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} />
-                        <Project name="ASCORP" sub="Company Profile, 2022." work="Front End Development" link="/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} />
+                        <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
+                        <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>
                 </div>
 

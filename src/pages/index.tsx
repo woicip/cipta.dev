@@ -36,15 +36,16 @@ export default function Index(){
             
             <AnimatePresence>
                 <main className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] flex items-start justify-between">
-                        <h1 className="text-[40px]">Passionate Full Stack <br/>Designer.</h1>
+                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] flex items-start justify-between">
+                        <h1 className="text-[40px] laptopS:text-[34px]">Passionate Full Stack <br className="mobileL:hidden" />Designer.</h1>
 
-                        <div>
+                        <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
                             <p className="font-light text-[16px] leading-normal">
-                                Halo, I'm Gunawan Cipta. Full Stack Designer <br/>
-                                who like to code, design & building products. <br/>
+                                Halo, I'm Gunawan Cipta. Full Stack Designer <br className="mobileL:hidden" />
+                                who like to code, design & building products. <br className="mobileL:hidden" />
                                 Based in Indonesia.
                             </p>
+                            
                             <motion.button 
                                 whileTap={{ scale: 0.8 }}
                                 transition={{ duration: 0.1, type: "spring" }} 
@@ -56,25 +57,25 @@ export default function Index(){
                         </div>
                     </div>
 
-                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] grid grid-cols-2 gap-5">
-                        <Project name="Rabfire" sub="Social media platform, 2023." work="Front End Development" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
-                        <Project name="ASCORP" sub="Company Profile, 2022." work="Front End Development" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
+                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
+                        <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
+                        <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>
 
-                    <div className="py-[150px] px-[300px] laptopM:px-[100px] flex flex-col items-center justify-center">
-                        <h1 className="text-[40px] font-normal text-center">Unlock your potential with<br/> diverse services</h1>
-                        <div className="mt-[70px] grid grid-cols-3 gap-5">
-                            <div className="p-[40px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#f3f3f3] to-transparent">
+                    <div className="py-[150px] px-[300px] laptopM:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">
+                        <h1 className="text-[40px] font-normal text-center">Unlock your potential with<br className="laptop:hidden"/> diverse services</h1>
+                        <div className="mt-[70px] grid grid-cols-3 gap-5 laptop:flex laptop:flex-wrap laptop:items-center laptop:justify-center">
+                            <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">User Interface & <br/> User Experience Design</h1>
                                 <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">Figma, Whimsical, Notion etc.</p>
                             </div>
 
-                            <div className="p-[40px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#f3f3f3] to-transparent">
+                            <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">Front End<br/> Development</h1>
                                 <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">React, Vue, Redux, Tailwind CSS etc.</p>
                             </div>
 
-                            <div className="p-[40px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#f3f3f3] to-transparent">
+                            <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">Back End<br/> Development</h1>
                                 <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">Node, Express, Mongo, GraphQL etc.</p>
                             </div>
