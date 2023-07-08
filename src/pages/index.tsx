@@ -7,6 +7,9 @@ import Project from "@/components/Projects/Project";
 import Footer from "@/components/Navigation/Footer";
 import CallToAction from "@/components/Navigation/CallToAction";
 
+// styles
+import HeadlineContainer from "@/styles/HeadlineContainer";
+
 // assets
 import ctaIcon from '@/assets/icons/cta.svg'
 import rabfireThumbnail from '@/assets/projects/rabfire/rabfire-thumbnail.webp'
@@ -36,7 +39,7 @@ export default function Index(){
             
             <AnimatePresence>
                 <main className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] flex items-start justify-between">
+                    <div className={HeadlineContainer}>
                         <h1 className="text-[40px] laptopS:text-[34px]">Passionate Full Stack <br className="mobileL:hidden" />Designer.</h1>
 
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
@@ -57,7 +60,7 @@ export default function Index(){
                         </div>
                     </div>
 
-                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
+                    <div className="px-[300px] pb-[100px] laptopL:px-[100px] laptopM:px-[100px] screen-1670px:px-[200px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
                         <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
                         <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>

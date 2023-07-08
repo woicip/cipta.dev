@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import Footer from "@/components/Navigation/Footer"
 import CallToAction from "@/components/Navigation/CallToAction"
 
+// styles
+import HeadlineContainer from "@/styles/HeadlineContainer"
+
 function Separate(){
     return (
         <div className="px-[50px] tabletM:px-[20px]">
@@ -77,9 +80,9 @@ export default function Timeline(props: any){
 
             <AnimatePresence>
                 <div className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] flex items-start justify-between">
+                    <div className={HeadlineContainer}>
                         <div>
-                            <h1 className="text-[40px]">What you do in life,<br className="tabletM:hidden"/> echoes in eternity.</h1>
+                            <h1 className="text-[40px] laptopS:text-[34px]">What you do in life,<br className="tabletM:hidden"/> echoes in eternity.</h1>
                             <p className="mt-[20px] tabletM:mt-[10px] text-[13px] italic font-light text-[#A3A3A3]">- Marcus Aurelius</p>
                         </div>
 

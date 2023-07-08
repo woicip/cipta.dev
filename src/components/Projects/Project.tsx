@@ -17,12 +17,12 @@ export default function Project(props: any){
                     }) }
                 </motion.div>
 
-                <motion.div className="h-[450px] laptopM:h-[400px] laptopS:h-[350px] laptop:h-[500px] tabletL:h-[400px] tabletM:h-[300px] mobileL:h-[250px] rounded-[30px] mobileL:rounded-[25px] overflow-hidden bg-[#D9D9D9]">
+                <motion.div className="h-[450px] laptopM:h-[400px] laptopL:h-[400px] laptopS:h-[350px] screen-1170px:h-[390px] laptop:h-[550px] tabletL:h-[450px] tabletM:h-[300px] mobileL:h-[250px] rounded-[30px] mobileL:rounded-[25px] overflow-hidden bg-[#D9D9D9]">
                     <motion.div 
                         whileHover={{ scale: 1.8 }}
                         transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >   
-                        <Image src={thumbnail} alt="rabfire" className="mobileL:scale-[1.1]" />
+                        <Image src={thumbnail} alt="rabfire" className="w-full h-full mobileL:scale-[1.1]" />
                     </motion.div>
                 </motion.div>
 

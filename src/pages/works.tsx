@@ -6,6 +6,9 @@ import Project from "@/components/Projects/Project"
 import Footer from "@/components/Navigation/Footer";
 import CallToAction from "@/components/Navigation/CallToAction";
 
+// styles
+import HeadlineContainer from "@/styles/HeadlineContainer";
+
 // assets
 import rabfireThumbnail from '@/assets/projects/rabfire/rabfire-thumbnail.webp'
 import ascorpThumbnail from '@/assets/projects/ascorp/ascorp-thumbnail.webp'
@@ -34,12 +37,12 @@ export default function Timeline(props: any){
 
             <AnimatePresence>
                 <div className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] flex items-center justify-between">
+                    <div className={HeadlineContainer}>
                         <div>
-                            <h1 className="text-[40px]">Code & Design<br/>Works.</h1>
+                            <h1 className="text-[40px] laptopS:text-[34px]">Code & Design<br/>Works.</h1>
                         </div>
 
-                        <div>
+                        <div className="tabletM:mt-[20px]">
                             <p className="font-light text-[16px] leading-normal">
                                 I selected these works that might <br/>
                                 relevant to audience of this web.
@@ -47,7 +50,7 @@ export default function Timeline(props: any){
                         </div>
                     </div>
 
-                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] grid grid-cols-2 gap-5">
+                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
                         <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
                         <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>

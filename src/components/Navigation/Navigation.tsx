@@ -29,7 +29,7 @@ export default function Navigation(props: any){
     const { openMenu, setOpenMenu } = props;
 
     return (
-        <div className="w-full py-[30px] px-[300px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] tabletM:px-[30px] mobileL:px-[20px] flex items-center justify-between bg-gradient-to-b from-white to-transparent fixed top-0 z-[10]">
+        <div className="w-full py-[30px] px-[300px] laptopM:px-[100px] laptopL:px-[100px] screen-1670px:px-[200px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] tabletM:px-[30px] mobileL:px-[20px] flex items-center justify-between bg-gradient-to-b from-white to-transparent fixed top-0 z-[10]">
             <Link href="/" className="">
                 <Image src={logo} alt="logo" />
             </Link>
