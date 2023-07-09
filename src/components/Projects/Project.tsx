@@ -8,7 +8,7 @@ export default function Project(props: any){
     const { name, sub, work, link, techs, thumbnail, layoutId } = props
 
     return (
-        <motion.div layoutId={layoutId}>
+        <motion.div transition={{ duration: 1.5, ease: [0.6, 0.01, -0.05, 0.9] }} layoutId={layoutId}>
             <Link href={link} className="relative cursor-pointer">
                 <motion.div className="py-[15px] px-[20px] mobileL:px-[15px] mobileL:py-[10px] rounded-[15px] absolute top-[20px] left-[20px] mobileL:top-[15px] mobileL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
                     { techs.map((tech: any, index: number) => {

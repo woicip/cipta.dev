@@ -22,9 +22,9 @@ import tailwind from '@/assets/techs/tailwindcss.svg'
 export default function Index(){
     return (
         <motion.main 
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.6 }}
             className="w-full h-full">
             <Head>
                 <title>Cipta</title>
@@ -40,7 +40,9 @@ export default function Index(){
             <AnimatePresence>
                 <main className="mt-[100px]">
                     <div className={HeadlineContainer}>
-                        <h1 className="text-[40px] laptopS:text-[34px]">Passionate Full Stack <br className="mobileL:hidden" />Designer.</h1>
+                        <motion.h1 transition={{ duration: 1.5, ease: [0.6, 0.01, -0.05, 0.9] }} layoutId="headline" className="text-[40px] laptopS:text-[34px]">
+                            Passionate Full Stack <br className="mobileL:hidden" />Designer.
+                        </motion.h1>
 
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
                             <p className="font-light text-[16px] leading-normal">
@@ -65,7 +67,7 @@ export default function Index(){
                         <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
                     </div>
 
-                    <div className="py-[150px] px-[300px] laptopM:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">
+                    <div className="py-[150px] px-[300px] screen-1170px:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">
                         <h1 className="text-[40px] font-normal text-center">Unlock your potential with<br className="laptop:hidden"/> diverse services</h1>
                         <div className="mt-[70px] grid grid-cols-3 gap-5 laptop:flex laptop:flex-wrap laptop:items-center laptop:justify-center">
                             <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">

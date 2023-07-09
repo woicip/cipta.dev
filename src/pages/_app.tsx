@@ -10,6 +10,7 @@ import classNames from 'classnames'
 import { AnimatePresence } from 'framer-motion'
 
 // components
+import Loader from '@/components/Loader'
 import Navigation from '@/components/Navigation/Navigation'
 import MobileNavigation from '@/components/Navigation/MobileNavigation'
 
@@ -17,6 +18,7 @@ import MobileNavigation from '@/components/Navigation/MobileNavigation'
 export default function App({ Component, pageProps }: AppProps) {
   const [ queryClient ] = React.useState(() => new QueryClient())
   const [ openMenu, setOpenMenu ] = React.useState(false)
+  const [ loader, setLoader ] = React.useState(true)
 
   const containerStyle = classNames(`w-full`)
 
@@ -33,21 +35,27 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <div className={containerStyle}>
-          <AnimatePresence>
-            {
-              openMenu ? 
-                <>
-                  <div className="bg-black/30 w-full h-screen fixed top-0 z-20 hidden tabletM:block transition-all"></div>
-                  <MobileNavigation setOpenMenu={setOpenMenu} />
-                </>
-                :
-                null
-            }
+          {
+            loader ? 
+            <Loader setLoader={setLoader} />
+            :
+            <AnimatePresence>
+              <div className={containerStyle}>
+                {
+                  openMenu ? 
+                    <>
+                      <div className="bg-black/30 w-full h-screen fixed top-0 z-20 hidden tabletM:block transition-all"></div>
+                      <MobileNavigation setOpenMenu={setOpenMenu} />
+                    </>
+                    :
+                    null
+                }
+
+                <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
+                <Component {...pageProps} />
+              </div>
           </AnimatePresence>
-          <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
-          <Component {...pageProps} />
-        </div>
+          }
       </Hydrate>
     </QueryClientProvider>
   )

@@ -24,6 +24,7 @@ export default function Footer(props: any){
                             <Link href="https://wa.me/6285782210951?text=%22Hello! I'm here to saying hi 🖐%22" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">WhatsApp</Link>
                             <Link href="imessage://woicipta@gmail.com" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">iMessage</Link>
                             <Link href="https://t.me/travisfr" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">Telegram</Link>
+                            <Link href="https://instagram.com/woicip" target='_blank' className="mb-[5px] text-[15px] font-light text-[#8A8A8A] block hover:underline transition-all">Instagram</Link>
                         </div>
 
                         <div>

@@ -16,6 +16,7 @@ module.exports = {
       'laptopS': { 'max': '1280px' },
       'laptop': { 'max': '1024px' },
       'tabletL': { 'max': '820px' },
+      'tabletX': { 'max': '768px' },
       'tabletM': { 'max': '640px' },
       'mobileL': { 'max': '425px' },
       'mobileM': { 'max': '375px' },
