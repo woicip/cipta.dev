@@ -22,39 +22,17 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const containerStyle = classNames(`w-full`)
 
-  React.useEffect(() => {
-    if(openMenu){
-      document.body.style.height = '100vh'
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.height = 'auto'
-      document.body.style.overflow = 'auto'
-    }
-  }, [openMenu])
-
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-          {
-            loader ? 
+          { loader ? 
             <Loader setLoader={setLoader} />
             :
-            <AnimatePresence>
-              <div className={containerStyle}>
-                {
-                  openMenu ? 
-                    <>
-                      <div className="bg-black/30 w-full h-screen fixed top-0 z-20 hidden tabletM:block transition-all"></div>
-                      <MobileNavigation setOpenMenu={setOpenMenu} />
-                    </>
-                    :
-                    null
-                }
-
-                <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
-                <Component {...pageProps} />
-              </div>
-          </AnimatePresence>
+            <div className={containerStyle}>
+              <MobileNavigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
+              <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
+              <Component {...pageProps} />
+            </div>
           }
       </Hydrate>
     </QueryClientProvider>

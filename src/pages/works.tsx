@@ -19,23 +19,24 @@ import tailwind from '@/assets/techs/tailwindcss.svg'
 
 export default function Timeline(props: any){
     return (
-        <motion.main
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            <Head>
-                <title>Works</title>
-                <meta name="description" content="Passionate Web Developer" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
-                <meta property="og:title" content="Cipta" />
-                <meta property="og:url" content="https://cipta.dev" />
-                <meta property="og:description" content="Passionate Web Developer" />
-                <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
-            </Head>
+        <AnimatePresence>
+            <motion.main
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+            >
+                <Head>
+                    <title>Works</title>
+                    <meta name="description" content="Passionate Web Developer" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="icon" href="/favicon.ico" />
+                    <meta property="og:title" content="Cipta" />
+                    <meta property="og:url" content="https://cipta.dev" />
+                    <meta property="og:description" content="Passionate Web Developer" />
+                    <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
+                </Head>
 
-            <AnimatePresence>
                 <div className="mt-[100px]">
                     <div className={HeadlineContainer}>
                         <div>
@@ -58,8 +59,8 @@ export default function Timeline(props: any){
 
                 <CallToAction />
                 <Footer />
-            </AnimatePresence>
 
-        </motion.main>
+            </motion.main>
+        </AnimatePresence>
     )
 }

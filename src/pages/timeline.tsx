@@ -62,23 +62,24 @@ function End(){
 
 export default function Timeline(props: any){
     return (
-        <motion.main
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            <Head>
-                <title>Timeline</title>
-                <meta name="description" content="Passionate Web Developer" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
-                <meta property="og:title" content="Cipta" />
-                <meta property="og:url" content="https://cipta.dev" />
-                <meta property="og:description" content="Passionate Web Developer" />
-                <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
-            </Head>
+        <AnimatePresence>
+            <motion.main
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+            >
+                <Head>
+                    <title>Timeline</title>
+                    <meta name="description" content="Passionate Web Developer" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="icon" href="/favicon.ico" />
+                    <meta property="og:title" content="Cipta" />
+                    <meta property="og:url" content="https://cipta.dev" />
+                    <meta property="og:description" content="Passionate Web Developer" />
+                    <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
+                </Head>
 
-            <AnimatePresence>
                 <div className="mt-[100px]">
                     <div className={HeadlineContainer}>
                         <div>
@@ -97,8 +98,14 @@ export default function Timeline(props: any){
                     <div className="px-[450px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px]">
                         <YearSeparator year={2023} />
                         <Separate />
-                        <Thread day="Tuesday" date="June 27, 2023" title="New Website Design Update! 2.0 🎉">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sit reiciendis accusamus, natus explicabo alias eos dicta ipsa ducimus quia laborum voluptatem error doloribus neque nam quas praesentium aut aliquam.
+                        <Thread day="Wednesday" date="July 12th, 2023" title="Cipta.dev Website Update 2.0 🎉">
+                            In January 17th, 2023 … Portfolio website 1.0 was released! It was a simple web portfolio where just displaying important information but after I discovering in my website I found that the website is lack of “text content” and “user experience”. 
+                            <br/><br/>
+                            The website has no consistency between projects contents, no Home menu, about page has lack of story, the image of the project is not relevant to the project, lack of story telling and social media contacts.
+                            <br/><br/>
+                            That’s why I was thinking about start again from beginning and craft my web portfolio to be has well-written content, has context between component and improving user experience.
+                            <br/><br/>
+                            And here you go. Website Update 2.0 🎉
                         </Thread>
 
                         <Thread day="Saturday" date="January 07, 2023" title="Totallin (Planning)">
@@ -156,8 +163,8 @@ export default function Timeline(props: any){
 
                 <CallToAction />
                 <Footer />
-            </AnimatePresence>
 
-        </motion.main>
+            </motion.main>
+        </AnimatePresence>
     )
 }

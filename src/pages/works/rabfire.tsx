@@ -76,7 +76,7 @@ export default function Rabfire(props: any){
                     </DetailContainer>
 
                     <ImageHighlight layoutId="rabfire">
-                        <motion.div className="py-[15px] px-[20px] rounded-[50px] absolute top-[30px] left-[30px] tabletL:top-[15px] tabletL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
+                        <motion.div className="py-[15px] px-[20px] mobileL:px-[15px] mobileL:py-[10px] rounded-full absolute top-[20px] left-[20px] mobileL:top-[15px] mobileL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
                             <Image src={next} alt="icon" className="w-[20px] mr-[20px]" />
                             <Image src={redux} alt="icon" className="w-[20px] mr-[20px]" />
                             <Image src={tailwind} alt="icon" className="w-[20px]" />

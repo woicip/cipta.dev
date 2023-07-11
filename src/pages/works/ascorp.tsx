@@ -10,6 +10,8 @@ import ascorpSquare1 from '@/assets/projects/ascorp/ascorp-square-1.svg'
 import ascorpSquare2 from '@/assets/projects/ascorp/ascorp-square-2.svg'
 import next from '@/assets/techs/next-black.svg'
 import tailwind from '@/assets/techs/tailwindcss.svg'
+import redux from '@/assets/techs/redux.svg'
+import rabfireThumbnail from '@/assets/projects/rabfire/rabfire-thumbnail.webp'
 
 // components
 import CallToAction from "@/components/Navigation/CallToAction"
@@ -19,6 +21,7 @@ import DetailContainer from "@/components/Works/DetailContainer"
 import ImageHighlight from "@/components/Works/ImageHighlight"
 import SecondaryImages from "@/components/Works/SecondaryImages"
 import HeadlineContainer from "@/components/Works/HeadlineContainer"
+import Project from "@/components/Projects/Project"
 
 export default function Ascorp(props: any){
     return (
@@ -75,8 +78,8 @@ export default function Ascorp(props: any){
                         </motion.div>
                     </DetailContainer>
 
-                    <ImageHighlight layoutId="rabfire">
-                        <motion.div className="py-[15px] px-[20px] rounded-[50px] absolute top-[30px] left-[30px] tabletL:top-[15px] tabletL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
+                    <ImageHighlight layoutId="ascorp">
+                        <motion.div className="py-[15px] px-[20px] mobileL:px-[15px] mobileL:py-[10px] rounded-full absolute top-[20px] left-[20px] mobileL:top-[15px] mobileL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
                             <Image src={next} alt="icon" className="w-[20px] mr-[20px]" />
                             <Image src={tailwind} alt="icon" className="w-[20px]" />
                         </motion.div>
@@ -124,7 +127,16 @@ export default function Ascorp(props: any){
                             that prioritize search engine visibility.
                         </p>
                     </HeadlineContainer>
+
                 </WorksContainer>
+
+                <section className="w-full mt-[10px] py-[30px] px-[300px] laptopM:px-[100px] laptopL:px-[100px] screen-1670px:px-[200px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] tabletM:px-[30px] mobileL:px-[20px]">
+                    <h1 className="text-[24px]">Take a look @ another works</h1>
+                    <div className="mt-[25px] grid grid-cols-2 gap-5">
+                        <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} />
+                        <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} />
+                    </div>
+                </section>
 
                 <CallToAction />
                 <Footer />

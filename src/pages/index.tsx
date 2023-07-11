@@ -68,21 +68,24 @@ export default function Index(){
                     </div>
 
                     <div className="py-[150px] px-[300px] screen-1170px:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">
-                        <h1 className="text-[40px] font-normal text-center">Unlock your potential with<br className="laptop:hidden"/> diverse services</h1>
-                        <div className="mt-[70px] grid grid-cols-3 gap-5 laptop:flex laptop:flex-wrap laptop:items-center laptop:justify-center">
+                        <h1 className="text-[40px] mobileS:text-[34px] font-normal text-center">
+                            Unlock your potential with<br className="laptop:hidden"/> diverse services
+                        </h1>
+
+                        <div className="mt-[70px] tabletM:mt-[50px] grid grid-cols-3 gap-5 laptop:flex laptop:flex-wrap laptop:items-center laptop:justify-center">
                             <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">User Interface & <br/> User Experience Design</h1>
-                                <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">Figma, Whimsical, Notion etc.</p>
+                                <p className="mt-[100px] font-light text-[16px] mobileS:text-[15px] text-[#9E9E9E]">Figma, Whimsical, Notion etc.</p>
                             </div>
 
                             <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">Front End<br/> Development</h1>
-                                <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">React, Vue, Redux, Tailwind CSS etc.</p>
+                                <p className="mt-[100px] font-light text-[16px] mobileS:text-[15px] text-[#9E9E9E]">React, Vue, Redux, Tailwind CSS etc.</p>
                             </div>
 
                             <div className="tabletL:w-full p-[40px] mobileL:p-[30px] rounded-[30px] border border-[#E4E4E4] bg-gradient-to-b from-[#fafafa] to-transparent">
                                 <h1 className="font-normal text-[22px]">Back End<br/> Development</h1>
-                                <p className="mt-[100px] font-light text-[16px] text-[#9E9E9E]">Node, Express, Mongo, GraphQL etc.</p>
+                                <p className="mt-[100px] font-light text-[16px] mobileS:text-[15px] text-[#9E9E9E]">Node, Express, Mongo, GraphQL etc.</p>
                             </div>
                         </div>
                     </div>

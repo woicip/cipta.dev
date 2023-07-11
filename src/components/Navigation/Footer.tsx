@@ -13,9 +13,18 @@ export default function Footer(props: any){
         <div className="mt-[20px] tabletM:px-[30px] py-[100px] mobileL:pb-[50px] px-[400px] laptopM:px-[100px] laptopS:px-[50px] laptop:px-[50px] mobileL:px-[20px]">
             <div className="flex items-start justify-between">
                 <div className="w-full flex items-start justify-between tabletM:flex-col">
-                    <div>
-                        <Image src={logoBlack} alt="logo" />
-                        <p className="mt-[15px] text-[15px] text-[#8A8A8A]">Passionate Full Stack <br/> Designer</p>
+                    <div className="w-full tabletM:flex tabletM:items-center tabletM:justify-between">
+                        <div className="h-full">
+                            <Image src={logoBlack} alt="logo" />
+                            <p className="mt-[15px] text-[15px] text-[#8A8A8A] tabletM:text-[14px] mobileL:text-[13px]">Passionate Full Stack <br/> Designer</p>
+                        </div>
+
+                        <p className="text-[13px] mt-[45px] text-[#8A8A8A] hidden mobileL:block text-left">
+                            Part of <br/>
+                            <Link href="https://kamideveloper.com" target='_blank' className="hover:underline transition-all">
+                                kamideveloper.com
+                            </Link>
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-[60px] tabletL:gap-[40px] tabletM:mt-[70px] tabletM:w-full tabletM:flex tabletM:items-start tabletM:justify-between">
@@ -50,9 +59,6 @@ export default function Footer(props: any){
                 <p className="text-[13px] text-[#8A8A8A] mobileL:hidden">Part of <br/><Link href="https://kamideveloper.com" target='_blank' className="hover:underline transition-all">kamideveloper.com</Link></p>
                 <p className="text-[13px] text-[#8A8A8A]">Local time {localTime.data?.utc_offset} <br/>{new Date(localTime.data?.unixtime * 1000).getHours().toString().padStart(2, '0')}.{new Date(localTime.data?.unixtime * 1000).getMinutes().toString().padStart(2, '0')} WIB</p>
             </div>
-
-            <p className="text-[13px] mt-[45px] text-[#8A8A8A] hidden mobileL:block text-center">Part of <br/><Link href="https://kamideveloper.com" target='_blank' className="hover:underline transition-all">kamideveloper.com</Link></p>
-            
         </div>
     )
 
