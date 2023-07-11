@@ -25,6 +25,7 @@ export default function About(props: any){
     const timeDiff = dt.getTime() - birthDate.getTime()
     const millisecondsPerYear = 31557600000;
     const age = Math.floor(timeDiff / millisecondsPerYear)
+    const firstExperience = 2021
 
     return (
         <AnimatePresence>
@@ -46,62 +47,31 @@ export default function About(props: any){
                 </Head>
 
                 <div className="mt-[100px]">
-                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] laptopL:px-[250px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] grid grid-cols-2 gap-10 laptopS:grid-cols-1 tabletL:pb-[0px]">
+                    <div className="py-[200px] px-[450px] laptopM:py-[150px] laptopM:px-[200px] laptopL:px-[250px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] grid grid-cols-2 gap-[100px] laptopS:grid-cols-1 tabletL:pb-[0px]">
                         <div>
                             <h1 className="text-[40px] laptopS:text-[34px]">About<br/>Cipta.dev</h1>
-                            <p className="mt-[40px] w-[450px] tabletL:w-full text-[16px] leading-loose font-light">
-                            I'm Gunawan Cipta, Full Stack Web Designer based in Indonesia. With 2+ years of experience, I specialize in JavaScript and frameworks, delivering efficient, scalable code.
+                            <p className="mt-[40px] w-[450px] tabletL:w-full text-[16px] leading-loose tabletM:text-[15px]">
+                            I'm Gunawan Cipta, Full Stack Designer based in Indonesia. With {dt.getFullYear() - firstExperience}+ years of experience, I specialize in JavaScript and frameworks, delivering efficient, scalable code.
                             <br/><br/>
                             Currently developing <Goto href="https://jualdesign.com">jualdesign.com</Goto> and <Goto href="https://ngetopup.com">ngetopup.com</Goto>
                             Let's collaborate and bring your vision to life!
                             </p>
 
-                            <div className="mt-[50px] tabletL:mt-[70px] grid grid-cols-2 gap-10">
-                                <p className="font-light text-[15px]">EST. <br/>2021</p>
-                                <p className="font-light text-[15px]">2+ Years <br/> Experience</p>
+                            <div className="mt-[40px] tabletL:mt-[70px] grid grid-cols-2 gap-10">
+                                <p className="text-[#8A8A8A] text-[14px]">EST. <br/>2021</p>
+                                <p className="text-[#8A8A8A] text-[14px]">{dt.getFullYear() - firstExperience}+ Years <br/> Experience</p>
                             </div>
                         </div>
 
                         <div className="h-[550px] laptopM:h-[500px] tabletL:h-fit rounded-[30px] overflow-hidden relative flex items-center justify-center">
-                            <div className="py-[15px] px-[20px] bg-white/20 backdrop-blur-2xl absolute bottom-4 left-4 rounded-[15px] overflow-hidden">
-                                <p className="text-white text-[15px]">Gunawan Cipta, {age} Years Old.</p>
+                            <div className="py-[15px] px-[20px] bg-white/20 backdrop-blur-2xl absolute bottom-4 left-4 rounded-[15px] overflow-hidden z-10">
+                                <p className="text-white text-[15px]">Gunawan Cipta.</p>
                             </div>
-                           <Image src={me} alt="me" /> 
+                            <motion.div whileInView={{ scale: 1.2 }} transition={{ duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }} >
+                                <Image src={me} alt="me" /> 
+                            </motion.div>
                         </div>
                     </div>
-
-                    {/* <div className="py-[100px] px-[450px] laptopM:pt-[50px] laptopM:py-[150px] laptopM:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">
-                        <h1 className="text-[40px]">What I'm doing.</h1>
-
-                        <div className="w-full mt-[50px] grid grid-cols-3 gap-5 laptop:flex laptop:flex-wrap laptop:items-center laptop:justify-center">
-                            <div className="tabletM:w-full h-[300px] p-[30px] border rounded-[40px] flex flex-col items-start justify-between bg-gradient-to-b from-[#fafafa] to-transparent">
-                                <div>
-                                    <p className="font-light italic mb-[10px] text-black/40">01</p>
-                                    <h1 className="font-light text-[30px] laptopM:text-[26px]">User Interface & <br/> Experience Design</h1>
-                                </div>
-
-                                <p className="font-light text-[#868686]">Figma, Whimsical, Notion etc.</p>
-                            </div>
-
-                            <div className="tabletM:w-full h-[300px] p-[30px] border rounded-[40px] flex flex-col items-start justify-between bg-gradient-to-b from-[#fafafa] to-transparent">
-                                <div>
-                                    <p className="font-light italic mb-[10px] text-black/40">02</p>
-                                    <h1 className="font-light text-[30px] laptopM:text-[26px]">Front End<br/> Development</h1>
-                                </div>
-
-                                <p className="font-light text-[#868686]">React, Redux, Tailwind CSS etc.</p>
-                            </div>
-
-                            <div className="tabletM:w-full h-[300px] p-[30px] border rounded-[40px] flex flex-col items-start justify-between bg-gradient-to-b from-[#fafafa] to-transparent"> 
-                                <div>
-                                    <p className="font-light italic mb-[10px] text-black/40">03</p>
-                                    <h1 className="font-light text-[30px] laptopM:text-[26px]">Back End<br/> Development</h1>
-                                </div>
-
-                                <p className="font-light text-[#868686]">Node.js, Express, SQL etc.</p>
-                            </div>
-                        </div>
-                    </div> */}
 
                     <div className="px-[300px] py-[100px] tabletM:py-[50px] laptopM:px-[100px] laptopS:px-[150px] laptop:px-[50px] tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px] grid grid-cols-3 gap-5 tabletL:grid-cols-1 tabletL:gap-0">
                         <div className="w-full h-[500px] laptopM:h-[400px] col-span-2 rounded-3xl overflow-hidden relative">
@@ -120,7 +90,7 @@ export default function About(props: any){
                     </div>
 
                     <div className="py-[10px] flex flex-col items-center justify-center">
-                        <p className="w-[500px] tabletM:w-full laptop:px-[50px] tabletM:px-[30px] leading-loose font-light">
+                        <p className="w-[500px] tabletM:w-full laptop:px-[50px] tabletM:px-[30px] leading-loose tabletM:text-[15px]">
                             I was a self-taught <Goto href="https://instagram.com/sincetwomuch">Graphic Designer</Goto> who love to design many cool things and trying something new with an album cover, poster or even brutalism design. At that time it was the best thing that I ever did! Overtime, I was discovered another field in the design … It was UI & UX Design.
                             <br/><br/>
                             As time goes by I learned a lot of things in UI & UX Design and starting to creating website design and learned from it. It was great until I started to thinking about to turn my design to be Interactive so I can do something with it. That’s why I’m thinking about being a Web Developer.

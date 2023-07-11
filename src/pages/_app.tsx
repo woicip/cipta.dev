@@ -7,18 +7,21 @@ import {
 } from '@tanstack/react-query'
 import React from 'react'
 import classNames from 'classnames'
-import { AnimatePresence } from 'framer-motion'
+import useDiscussStore from '@/store/useDiscussStore'
 
 // components
 import Loader from '@/components/Loader'
 import Navigation from '@/components/Navigation/Navigation'
 import MobileNavigation from '@/components/Navigation/MobileNavigation'
-
+import DiscussProject from '@/components/Projects/DiscussProject'
 
 export default function App({ Component, pageProps }: AppProps) {
+
   const [ queryClient ] = React.useState(() => new QueryClient())
+
   const [ openMenu, setOpenMenu ] = React.useState(false)
   const [ loader, setLoader ] = React.useState(true)
+  const [ openDiscuss, setOpenDiscuss ] = React.useState(false);
 
   const containerStyle = classNames(`w-full`)
 
@@ -29,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Loader setLoader={setLoader} />
             :
             <div className={containerStyle}>
+              <DiscussProject openDiscuss={openDiscuss} setOpenDiscuss={setOpenDiscuss} />
               <MobileNavigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
               <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
               <Component {...pageProps} />

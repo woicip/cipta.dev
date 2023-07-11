@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Link from "next/link"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
 // components
@@ -7,6 +9,9 @@ import CallToAction from "@/components/Navigation/CallToAction"
 
 // styles
 import HeadlineContainer from "@/styles/HeadlineContainer"
+
+// assets
+import ciptaMeta from '@/assets/cipta-meta.png'
 
 function Separate(){
     return (
@@ -32,13 +37,13 @@ function Thread(props: any){
     return (
         <div className="h-full px-[50px] tabletM:pr-0 tabletM:px-[20px] grid grid-cols-[40px_1fr] gap-5 laptopM:gap-2 tabletM:gap-0">
             <div className="h-full relative">
-                <div className="w-[10px] h-[10px] bg-[#555555] absolute rounded-full top-[20px] left-[-4px]"></div>
+                <div className="w-[10px] h-[10px] bg-[#555555] absolute rounded-full top-[20px] left-[-4px] tabletL:top-[5px]"></div>
                 <div className="w-[2px] h-full bg-[#F1F1F1]"></div>
             </div>
 
             <div className="grid grid-cols-[140px_1fr] tabletL:grid-cols-1 gap-5 laptopM:gap-2">
-                <p className="text-[14px] text-[#797979]">{day} <br/> {date}</p>
-                <div className="w-full pb-[150px] tabletL:mt-[20px]">
+                <p className="text-[14px] text-[#797979]">{day} <br className="tabletL:hidden" /> {date}</p>
+                <div className="w-full pb-[150px] tabletL:mt-[10px]">
                     <h1 className="text-[20px]">{title}</h1>
                     <p className="w-[500px] laptopS:w-full mt-[30px] tabletL:mt-[15px] text-[#767676] text-[15px] leading-relaxed">{props.children}</p>
                 </div>
@@ -98,14 +103,26 @@ export default function Timeline(props: any){
                     <div className="px-[450px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px]">
                         <YearSeparator year={2023} />
                         <Separate />
-                        <Thread day="Wednesday" date="July 12th, 2023" title="Cipta.dev Website Update 2.0 🎉">
+                        <Thread day="Wednesday" date="July 12, 2023" title="Cipta.dev Website Update 2.0 🎉">
                             In January 17th, 2023 … Portfolio website 1.0 was released! It was a simple web portfolio where just displaying important information but after I discovering in my website I found that the website is lack of “text content” and “user experience”. 
                             <br/><br/>
                             The website has no consistency between projects contents, no Home menu, about page has lack of story, the image of the project is not relevant to the project, lack of story telling and social media contacts.
                             <br/><br/>
-                            That’s why I was thinking about start again from beginning and craft my web portfolio to be has well-written content, has context between component and improving user experience.
+                            That’s why I was thinking about to start again from beginning and craft my web portfolio to be has well-written content, has context between component and improving user experience.
                             <br/><br/>
                             And here you go. Website Update 2.0 🎉
+
+                            <Link href="https://old.cipta.dev" target="_blank" className="block mt-[30px] border rounded-[20px] overflow-hidden tabletM:rounded-[15px]">
+                                <Image src={ciptaMeta} alt="thumbnail" />
+                                <div className="p-[10px]">
+                                    <h1 className="text-black">Website 1.0 of cipta.dev</h1>
+                                    <p className="text-[14px]">Passionate web developer</p>
+                                </div>
+                            </Link>
+                        </Thread>
+
+                        <Thread day="Tuesday" date="February 07, 2023" title="Frontend Dev @Rabfire">
+                            In this day I was joined to Rabfire team as a Frontend Developer who have responsibility to create User Interface from the design given by team and collaborating with the Backend team to integrate with REST API given. Powered with Next, Redux and Tailwind CSS to built the project.
                         </Thread>
 
                         <Thread day="Saturday" date="January 07, 2023" title="Totallin (Planning)">

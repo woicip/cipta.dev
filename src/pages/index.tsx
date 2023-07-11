@@ -45,7 +45,7 @@ export default function Index(){
                         </motion.h1>
 
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
-                            <p className="font-light text-[16px] leading-normal">
+                            <p className="text-[16px] leading-loose tabletM:text-[15.5px]">
                                 Halo, I'm Gunawan Cipta. Full Stack Designer <br className="mobileL:hidden" />
                                 who like to code, design & building digital products. <br className="mobileL:hidden" />
                                 Based in Indonesia.
