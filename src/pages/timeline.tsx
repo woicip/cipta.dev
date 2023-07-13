@@ -12,7 +12,8 @@ import HeadlineContainer from "@/styles/HeadlineContainer"
 
 // assets
 import ciptaMeta from '@/assets/cipta-meta.png'
-import rabfireLogo from '@/assets/projects/rabfire/rabfire-logo.svg'
+import githubMark from '@/assets/icons/github-mark.svg'
+import designupdate from '@/assets/timeline/designupdate.png'
 
 function Separate(){
     return (
@@ -109,30 +110,26 @@ export default function Timeline(props: any){
                             <br/><br/>
                             The website has no consistency between projects contents, no Home menu, about page has lack of story, the image of the project is not relevant to the project, lack of story telling and social media contacts.
                             <br/><br/>
-                            That’s why I was thinking about to start again from beginning and craft my web portfolio to be has well-written content, has context between component and improving user experience.
+                            That&apos;s why I was thinking about to start again from beginning and craft my web portfolio to be has well-written content, has context between component and improving user experience.
                             <br/><br/>
                             And here you go. Website Update 2.0 🎉
 
-                            <Link href="https://old.cipta.dev" target="_blank" className="block mt-[30px] border rounded-[20px] overflow-hidden tabletM:rounded-[15px]">
-                                <Image src={ciptaMeta} alt="thumbnail" />
-                                <div className="p-[10px]">
-                                    <h1 className="text-black">Website 1.0 of cipta.dev</h1>
-                                    <p className="text-[14px]">Passionate web developer</p>
-                                </div>
-                            </Link>
+                            <div className="h-fit w-fit border mt-[30px] rounded-[20px] tabletM:rounded-[15px] overflow-hidden">
+                                <Image src={designupdate} alt="thumbnail" />
+                            </div>
                         </Thread>
 
                         <Thread day="Tuesday" date="February 07, 2023" title="Frontend Dev @Rabfire">
                             At this day I was joined to Rabfire team as a Frontend Developer who have responsibility to create User Interface from the design given by team and collaborating with the Backend team to integrate with REST API given. Powered with Next, Redux and Tailwind CSS to built the project.
                         </Thread>
 
-                        <Thread day="Saturday" date="January 07, 2023" title="Totallin (Planning)">
+                        <Thread day="Saturday" date="January 07, 2023" title="Totallin (Planning & Thoughts)">
                             So, I have several problem these days where I need some app/tools that can track my income & Outcome so I can evaluate my financial.
                             <br/><br/>
                             I'm thinking about to make mobile app where I can input my income & outcome and then the app will generate whether I am a money spender or I am a money saver.
                         </Thread>
 
-                        <Thread day="Tuesday" date="January 03, 2023" title="Specky.site (Planning)">
+                        <Thread day="Tuesday" date="January 03, 2023" title="Specky.site (Planning & Thoughts)">
                             Wanna show off your PC specs ? Or you just wanna write a PC specs and then give it to a PC seller ?
                             <br/> <br/>
                             Today I'm thinking about this mini project because it'll be fun tho!
@@ -140,6 +137,10 @@ export default function Timeline(props: any){
                         
                         <YearSeparator year={2022} />
                         <Separate />
+                        <Thread day="Saturday" date="December 20, 2022" title="Frontend Developer & Designer @ASCORP">
+                            At this time I got cool project which is to make a design of a company profile and developing a company profile website for Entertainment agency named ASCORP.
+                        </Thread>
+
                         <Thread day="Saturday" date="November 12, 2022" title="IMAGYNATION">
                             IMAGYNATION is a REST API for developer to test their UI Prototype, UI Testing or even any other use case using IMAGYNATION API.
                             <br/><br/>
@@ -149,7 +150,15 @@ export default function Timeline(props: any){
 
                             Contribution are open.
 
-                            https://github.com/woicip/imagynation-api
+                            <Link href="https://github.com/woicip/imagynation-api" className="tabletL:w-full w-fit overflow-auto mt-[30px] py-[15px] px-[20px] rounded-2xl text-[#333] border flex items-center justify-start">
+                                <Image src={githubMark} alt="icon" className="w-[20px] mr-[20px]" />
+                                Imagynation API
+                            </Link>
+                            
+                            <Link href="https://github.com/woicip/imagynation-docs" className="tabletL:w-full w-fit overflow-auto mt-[20px] py-[15px] px-[20px] rounded-2xl text-[#333] border flex items-center justify-start">
+                                <Image src={githubMark} alt="icon" className="w-[20px] mr-[20px]" />
+                                Imagynation Docs
+                            </Link>
                         </Thread>
 
                         <Thread day="Monday" date="July 11, 2022" title="Dev Quiz with Bun.js">
