@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -50,6 +51,17 @@ export default function Loader(props: any){
 
     return (
         <AnimatePresence>
+            <Head>
+                <title>Cipta</title>
+                <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+                <meta property="og:title" content="Cipta" />
+                <meta property="og:url" content="https://cipta.dev" />
+                <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
+            </Head>
+
             <motion.div initial="hidden" animate="show" exit="exit" variants={variants} 
                 onAnimationComplete={() => setLoader(false)} 
                 className="fixed w-screen h-screen bg-white top-0 z-[100] flex items-center justify-center">
