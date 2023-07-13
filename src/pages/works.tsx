@@ -28,12 +28,12 @@ export default function Timeline(props: any){
             >
                 <Head>
                     <title>Works</title>
-                    <meta name="description" content="Passionate Web Developer" />
+                    <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
-                    <meta property="og:title" content="Cipta" />
+                    <meta property="og:title" content="Works" />
                     <meta property="og:url" content="https://cipta.dev" />
-                    <meta property="og:description" content="Passionate Web Developer" />
+                    <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
                 </Head>
 

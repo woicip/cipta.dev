@@ -37,12 +37,12 @@ export default function About(props: any){
             >
                 <Head>
                     <title>About</title>
-                    <meta name="description" content="Passionate Web Developer" />
+                    <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
-                    <meta property="og:title" content="Cipta" />
+                    <meta property="og:title" content="About" />
                     <meta property="og:url" content="https://cipta.dev" />
-                    <meta property="og:description" content="Passionate Web Developer" />
+                    <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
                 </Head>
 
@@ -51,9 +51,9 @@ export default function About(props: any){
                         <div>
                             <h1 className="text-[40px] laptopS:text-[34px]">About<br/>Cipta.dev</h1>
                             <p className="mt-[40px] w-[450px] tabletL:w-full text-[16px] leading-loose tabletM:text-[15px]">
-                            I'm Gunawan Cipta, Full Stack Designer based in Indonesia. With {dt.getFullYear() - firstExperience}+ years of experience, I specialize in JavaScript and frameworks, delivering efficient, scalable code.
+                            I'm Gunawan Cipta, Full Stack Designer based in Indonesia. With {dt.getFullYear() - firstExperience}+ years of experience, I specialize in Typescript, Next.js, Tailwind CSS and Node.js for daily tech stack.
                             <br/><br/>
-                            Currently developing <Goto href="https://jualdesign.com">jualdesign.com</Goto> and <Goto href="https://ngetopup.com">ngetopup.com</Goto>
+                            Currently developing <Goto href="https://jualdesign.com">jualdesign.com</Goto> and <Goto href="https://ngetopup.com">ngetopup.com</Goto> and I'm part of <Goto href="https://kamideveloper.com">kamideveloper.com</Goto> 
                             Let's collaborate and bring your vision to life!
                             </p>
 

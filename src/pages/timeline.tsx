@@ -12,6 +12,7 @@ import HeadlineContainer from "@/styles/HeadlineContainer"
 
 // assets
 import ciptaMeta from '@/assets/cipta-meta.png'
+import rabfireLogo from '@/assets/projects/rabfire/rabfire-logo.svg'
 
 function Separate(){
     return (
@@ -45,7 +46,7 @@ function Thread(props: any){
                 <p className="text-[14px] text-[#797979]">{day} <br className="tabletL:hidden" /> {date}</p>
                 <div className="w-full pb-[150px] tabletL:mt-[10px]">
                     <h1 className="text-[20px]">{title}</h1>
-                    <p className="w-[500px] laptopS:w-full mt-[30px] tabletL:mt-[15px] text-[#767676] text-[15px] leading-relaxed">{props.children}</p>
+                    <p className="w-[500px] laptopS:w-full mt-[30px] tabletL:mt-[15px] text-[#767676] text-[15px] leading-loose">{props.children}</p>
                 </div>
             </div>
         </div>
@@ -76,12 +77,12 @@ export default function Timeline(props: any){
             >
                 <Head>
                     <title>Timeline</title>
-                    <meta name="description" content="Passionate Web Developer" />
+                    <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
-                    <meta property="og:title" content="Cipta" />
+                    <meta property="og:title" content="Timeline" />
                     <meta property="og:url" content="https://cipta.dev" />
-                    <meta property="og:description" content="Passionate Web Developer" />
+                    <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                     <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
                 </Head>
 
@@ -122,7 +123,7 @@ export default function Timeline(props: any){
                         </Thread>
 
                         <Thread day="Tuesday" date="February 07, 2023" title="Frontend Dev @Rabfire">
-                            In this day I was joined to Rabfire team as a Frontend Developer who have responsibility to create User Interface from the design given by team and collaborating with the Backend team to integrate with REST API given. Powered with Next, Redux and Tailwind CSS to built the project.
+                            At this day I was joined to Rabfire team as a Frontend Developer who have responsibility to create User Interface from the design given by team and collaborating with the Backend team to integrate with REST API given. Powered with Next, Redux and Tailwind CSS to built the project.
                         </Thread>
 
                         <Thread day="Saturday" date="January 07, 2023" title="Totallin (Planning)">
@@ -145,20 +146,24 @@ export default function Timeline(props: any){
                             The REST API providing developers with some dummies data like user data, posts data, blogs data etc. How about the docs ? You can visit the web, I'm still working on it but the API itself is ready to use.
                             <br/><br/>
                             My current problem now is finding a free hosting to host my SQL database and host the API.
+
+                            Contribution are open.
+
+                            https://github.com/woicip/imagynation-api
                         </Thread>
 
                         <Thread day="Monday" date="July 11, 2022" title="Dev Quiz with Bun.js">
-                            IMAGYNATION is a REST API for developer to test their UI Prototype, UI Testing or even any other use case using IMAGYNATION API.
+                            So the context is at that time Bun JS is launched to public but still not stable yet. A lot of people saying that Bun JS is blazingly fast, said people on Twitter.
                             <br/><br/>
-                            The REST API providing developers with some dummies data like user data, posts data, blogs data etc. How about the docs ? You can visit the web, I'm still working on it but the API itself is ready to use.
+                            Personally ... I love Bun ❤ because I don't need to wait "Starting the development server ..." anymore when I want to run the React project using Bun. It just took 1 ms to start the development server!
                             <br/><br/>
-                            My current problem now is finding a free hosting to host my SQL database and host the API.
+                            So with that knowledge, I was started to build Dev Quiz using React and made the API using Bun to handling the HTTP Request & Response.
                         </Thread>
 
                         <Thread day="Sunday" date="July 10, 2022" title="SquarePass">
-                            IMAGYNATION is a REST API for developer to test their UI Prototype, UI Testing or even any other use case using IMAGYNATION API.
+                            Well... basically a web app to store your account information
                             <br/><br/>
-                            The REST API providing developers with some dummies data like user data, posts data, blogs data etc. How about the docs ? You can visit the web, I'm still working on it but the API itself is ready to use.
+                            This is good for you to keep important credentials like Email, Password, Secret Key but you don't have a platform to keep your credentials ?
                             <br/><br/>
                             My current problem now is finding a free hosting to host my SQL database and host the API.
                         </Thread>
