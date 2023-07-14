@@ -64,7 +64,7 @@ export default function Rabfire(props: any){
                             <p className="mt-[5px] tabletM:text-[15px]">Feb - Jun 2023</p>
                         </div>
 
-                        <motion.div className="text-left py-[10px] px-[13px] hover:bg-[#f3f3f3] rounded-2xl transition-all overflow-hidden">
+                        <motion.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all overflow-hidden">
                             <Link href="https://social.rabfire.com" target="_blank">
                                 <p className="font-light text-[15px]">WWW</p>
                                 <div className="mt-[5px] flex items-center">

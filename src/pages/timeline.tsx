@@ -105,7 +105,7 @@ export default function Timeline(props: any){
                     <div className="px-[450px] laptopM:px-[200px] screen-1170px:px-[300px] laptopS:px-[150px] laptop:px-[50px] tabletL:flex-col tabletM:px-[30px] tabletL:py-[100px] mobileL:px-[20px]">
                         <YearSeparator year={2023} />
                         <Separate />
-                        <Thread day="Wednesday" date="July 12, 2023" title="Cipta.dev Website Update 2.0 🎉">
+                        <Thread day="Friday" date="July 14, 2023" title="Cipta.dev Website Update 2.0 🎉">
                             In January 17th, 2023 … Portfolio website 1.0 was released! It was a simple web portfolio where just displaying important information but after I discovering in my website I found that the website is lack of “text content” and “user experience”. 
                             <br/><br/>
                             The website has no consistency between projects contents, no Home menu, about page has lack of story, the image of the project is not relevant to the project, lack of story telling and social media contacts.
@@ -119,7 +119,7 @@ export default function Timeline(props: any){
                             </div>
                         </Thread>
 
-                        <Thread day="Tuesday" date="February 07, 2023" title="Frontend Dev @Rabfire">
+                        <Thread day="Tuesday" date="February 07, 2023" title="Frontend Developer @Rabfire">
                             At this day I was joined to Rabfire team as a Frontend Developer who have responsibility to create User Interface from the design given by team and collaborating with the Backend team to integrate with REST API given. Powered with Next, Redux and Tailwind CSS to built the project.
                         </Thread>
 

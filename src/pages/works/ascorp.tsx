@@ -63,10 +63,10 @@ export default function Ascorp(props: any){
 
                         <div>
                             <p className="font-light text-[15px]">Timeline</p>
-                            <p className="mt-[5px] tabletM:text-[15px]">Dec 2022 - Jun 2023</p>
+                            <p className="mt-[5px] tabletM:text-[15px]">Dec 2022 ~ Jan 2023</p>
                         </div>
 
-                        <motion.div className="text-left py-[10px] px-[13px] hover:bg-[#f3f3f3] rounded-2xl transition-all">
+                        <motion.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all">
                             <Link href="https://andhikasurya.com" target="_blank">
                                 <p className="font-light text-[15px]">WWW</p>
                                 <div className="mt-[5px] flex items-center">
@@ -128,14 +128,6 @@ export default function Ascorp(props: any){
                     </HeadlineContainer>
 
                 </WorksContainer>
-
-                <section className="w-full mt-[10px] py-[30px] px-[300px] laptopM:px-[100px] laptopL:px-[100px] screen-1670px:px-[200px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] tabletM:px-[30px] mobileL:px-[20px]">
-                    <h1 className="text-[24px]">Take a look @ another works</h1>
-                    <div className="mt-[25px] grid grid-cols-2 gap-5">
-                        <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} />
-                        <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} />
-                    </div>
-                </section>
 
                 <CallToAction />
                 <Footer />

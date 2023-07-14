@@ -22,7 +22,7 @@ import tailwind from '@/assets/techs/tailwindcss.svg'
 export default function Index(){
     return (
         <motion.main 
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.6 }}
             className="w-full h-full">

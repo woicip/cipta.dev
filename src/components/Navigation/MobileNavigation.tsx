@@ -58,7 +58,7 @@ export default function MobileNavigation(props: any){
                                             { router.pathname === '/timeline' ? <motion.div layoutId="ring" className="w-[5px] h-[5px] mr-[25px] bg-black rounded-full"></motion.div> : null }
                                             <motion.div layout>
                                                 <h1 className="text-[17px]">Timeline</h1>
-                                                <p className="text-[14px] text-black/30">3 Years, 7 Threads</p>
+                                                <p className="text-[14px] text-black/30">3 Years, 9 Threads</p>
                                             </motion.div>
                                         </motion.div>
                                     </Link>
