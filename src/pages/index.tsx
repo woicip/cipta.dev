@@ -28,12 +28,12 @@ export default function Index(){
             className="w-full h-full">
             <Head>
                 <title>Cipta</title>
-                <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta name="description" content="Developer who love to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content="Cipta" />
                 <meta property="og:url" content="https://cipta.dev" />
-                <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta property="og:description" content="Developer who love to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                 <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
             </Head>
             
@@ -41,12 +41,12 @@ export default function Index(){
                 <main className="mt-[100px]">
                     <div className={HeadlineContainer}>
                         <motion.h1 transition={{ duration: 1.5, ease: [0.6, 0.01, -0.05, 0.9] }} layoutId="headline" className="text-[40px] laptopS:text-[34px]">
-                            Passionate Full Stack <br className="mobileL:hidden" />Designer.
+                            Passionate Full Stack <br className="mobileL:hidden" />Developer.
                         </motion.h1>
 
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
                             <p className="text-[16px] leading-loose tabletM:text-[15.5px]">
-                                Halo, I'm Gunawan Cipta. Full Stack Designer <br className="mobileL:hidden" />
+                                Halo, I'm Gunawan Cipta. Full Stack Developer <br className="mobileL:hidden" />
                                 who love to code, design & building digital products. <br className="mobileL:hidden" />
                                 Specialize in Typescript, Next.js, Tailwind CSS <br className="mobileL:hidden" /> and Node.js.
                                 Based in Indonesia.
