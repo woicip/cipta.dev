@@ -53,12 +53,12 @@ export default function Loader(props: any){
         <AnimatePresence>
             <Head>
                 <title>Cipta</title>
-                <meta name="description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta name="description" content="Developer who love to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content="Cipta" />
                 <meta property="og:url" content="https://cipta.dev" />
-                <meta property="og:description" content="A person who like to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
+                <meta property="og:description" content="Developer who love to code, design & building digital product. Specialize in Typescript, Next.js, Tailwind CSS & Node.js" />
                 <meta property="og:image" content="https://cipta.dev/cipta-meta.png" />
             </Head>
 
@@ -67,7 +67,7 @@ export default function Loader(props: any){
                 className="fixed w-screen h-screen bg-white top-0 z-[100] flex items-center justify-center">
                 <motion.div variants={item} className="z-[90] absolute">
                     <Image src={logo} alt="logo" />
-                    <motion.h1 layoutId="headline" className="mt-[20px] text-[35px] tabletL:text-[30px]">Passionate Full Stack <br/> Designer.</motion.h1>
+                    <motion.h1 layoutId="headline" className="mt-[20px] text-[35px] tabletL:text-[30px]">Passionate Full Stack <br/> Developer.</motion.h1>
                 </motion.div>
 
                 <motion.div layoutId="ascorp" variants={item} className="absolute left-[70px] top-[-20px] laptopL:left-[60px] laptopL:top-[70px] laptopM:top-[-10px] laptopM:left-[-60px] laptopS:top-[-80px] tabletL:top-[-30px] mobileL:top-[-90px] mobileL:left-[-250px] mobileS:left-[-250px]">

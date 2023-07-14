@@ -46,7 +46,7 @@ export default function MobileNavigation(props: any){
                                             { router.pathname === '/' ? <motion.div layoutId="ring" className="w-[5px] h-[5px] mr-[25px] bg-black rounded-full"></motion.div> : null }
                                             <motion.div layout>
                                                 <h1 className="text-[17px]">Home</h1>
-                                                <p className="text-[14px] text-black/30">Full Stack Designer</p>
+                                                <p className="text-[14px] text-black/30">Full Stack Developer</p>
                                             </motion.div>
                                         </motion.div>
                                     </Link>
