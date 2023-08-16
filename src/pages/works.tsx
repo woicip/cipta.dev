@@ -1,5 +1,6 @@
 import Head from "next/head"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
 
 // components
 import Project from "@/components/Projects/Project"
@@ -12,15 +13,46 @@ import HeadlineContainer from "@/styles/HeadlineContainer";
 // assets
 import rabfireThumbnail from '@/assets/projects/rabfire/rabfire-thumbnail.webp'
 import ascorpThumbnail from '@/assets/projects/ascorp/ascorp-thumbnail.webp'
+import danicomThumbnail from '@/assets/projects/danicom/thumbnail.webp'
 
 import next from '@/assets/techs/next-black.svg'
 import redux from '@/assets/techs/redux.svg'
 import tailwind from '@/assets/techs/tailwindcss.svg'
 
+function WebsiteCatalog(){
+    return (
+        <m.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+            className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px] tabletL:mt-[-100px]">
+            <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
+            <Project name="D'ANICOM" sub="Community Profile, 2023." work="Frontend" link="/works/danicom" techs={[next, tailwind]} thumbnail={danicomThumbnail} layoutId="danicom" />
+            <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
+        </m.div>
+    )
+}
+
+function APIsCatalog(){
+    return (
+        <m.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
+            className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px] tabletL:mt-[-100px]">
+            <Project name="JFest Schedule API" sub="REST API, 2023." work="FullStack" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="" />
+            <Project name="IMAGYNATION API" sub="REST API, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="" />
+        </m.div>
+    )
+}
+
 export default function Timeline(props: any){
+
+    const [ type, setType ] = useState<'website' | 'apis' | 'opensource'>('website')
+
     return (
         <AnimatePresence>
-            <motion.main
+            <m.main
                 initial={{ opacity: 0, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -51,16 +83,34 @@ export default function Timeline(props: any){
                         </div>
                     </div>
 
-                    <div className="px-[300px] pb-[100px] laptopM:px-[100px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
-                        <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
-                        <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
-                    </div>
+                    <m.div className="sticky top-[20px] mobileL:top-[70px] w-full mobileL:px-[20px] mb-[100px] mx-auto flex items-center justify-center z-[60]">
+                        <m.div className="w-fit mobileL:w-full p-[10px] rounded-full bg-[#f7f7f7] grid grid-cols-2 gap-[10px] mobileL:gap-0">
+                            <m.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-50 mobileL:text-[14px]`} onClick={() => setType('website')}>
+                                Website
+                                { type === 'website' && <motion.button layoutId="type" className={`w-full absolute left-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('website')}>Website</motion.button> }
+                            </m.div>
+
+                            <m.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-10 mobileL:text-[14px]`} onClick={() => setType('apis')}>
+                                APIs
+                                { type === 'apis' && <motion.button layoutId="type" className={`w-full absolute right-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('apis')}>APIs</motion.button> }
+                            </m.div>
+
+                            {/* <motion.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-10 mobileL:text-[14px]`} onClick={() => setType('opensource')}>
+                                Open Source
+                                { type === 'opensource' && <motion.button layoutId="type" className={`w-full absolute right-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('apis')}>APIs</motion.button> }
+                            </motion.div> */}
+                        </m.div>
+                    </m.div>
+                    
+                    { type === 'website' && <WebsiteCatalog /> }
+                    { type === 'apis' && <APIsCatalog /> }
+                    
                 </div>
 
                 <CallToAction />
                 <Footer />
 
-            </motion.main>
+            </m.main>
         </AnimatePresence>
     )
 }

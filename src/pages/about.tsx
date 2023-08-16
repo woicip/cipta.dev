@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, motion, AnimatePresence } from "framer-motion"
 
 // components
 import CallToAction from "@/components/Navigation/CallToAction"
@@ -29,7 +29,7 @@ export default function About(props: any){
 
     return (
         <AnimatePresence>
-            <motion.main
+            <m.main
                 initial={{ opacity: 0, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -67,9 +67,9 @@ export default function About(props: any){
                             <div className="py-[15px] px-[20px] bg-white/20 backdrop-blur-2xl absolute bottom-4 left-4 rounded-[15px] overflow-hidden z-10">
                                 <p className="text-white text-[15px]">Gunawan Cipta.</p>
                             </div>
-                            <motion.div whileInView={{ scale: 1.2 }} transition={{ duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }} >
+                            <m.div whileInView={{ scale: 1.2 }} transition={{ duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }} >
                                 <Image src={me} alt="me" /> 
-                            </motion.div>
+                            </m.div>
                         </div>
                     </div>
 
@@ -98,7 +98,7 @@ export default function About(props: any){
                             At this time I started to building web apps like Lifevy, <Goto href="https://github.com/woicip/squarepass">SquarePass</Goto> and <Goto href="https://github.com/woicip/only-me">OnlyMe</Goto>. It’s really fun when you can make a digital product based on your ideas and thoughts. Till now.
                         </p>
 
-                        <motion.div>
+                        <m.div>
                             <Link href="https://open.spotify.com/playlist/5YuCKQrZmAhVj2DCI08zUQ?si=1756f7e761dd425c" target="_blank" className="w-[500px] tabletM:w-[90vw] laptopM:w-[400px] mt-[100px] mb-[100px] py-[15px] px-[20px] flex items-center rounded-full bg-[#333333]">
                                 <Image src={spotify} alt="spotify" />
                                 <div className="ml-[20px] text-white">
@@ -106,13 +106,13 @@ export default function About(props: any){
                                     <h1 className="text-[18px]">Renaissance</h1>
                                 </div>
                             </Link>
-                        </motion.div>
+                        </m.div>
                     </div>
 
                     <CallToAction />
                     <Footer />
                 </div>
-            </motion.main>
+            </m.main>
         </AnimatePresence>
     )
 }

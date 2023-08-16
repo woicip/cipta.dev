@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, motion, AnimatePresence } from "framer-motion"
 
 // components
 import Footer from "@/components/Navigation/Footer"
@@ -70,7 +70,7 @@ function End(){
 export default function Timeline(props: any){
     return (
         <AnimatePresence>
-            <motion.main
+            <m.main
                 initial={{ opacity: 0, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -169,7 +169,7 @@ export default function Timeline(props: any){
                             So with that knowledge, I was started to build Dev Quiz using React and made the API using Bun to handling the HTTP Request & Response.
                         </Thread>
 
-                        <Thread day="Sunday" date="July 10, 2022" title="SquarePass">
+                        <Thread day="Sunday" date="July 10, 2022" title="SquarePass (Archived)">
                             Well... basically a web app to store your account information
                             <br/><br/>
                             This is good for you to keep important credentials like Email, Password, Secret Key but you don't have a platform to keep your credentials ?
@@ -180,7 +180,7 @@ export default function Timeline(props: any){
                         <YearSeparator year={2021} />
                         <Separate />
 
-                        <Thread day="Thursday" date="October 20, 2022" title="Livefy">
+                        <Thread day="Thursday" date="October 20, 2022" title="Livefy (Archived)">
                             Do you ever feel like you have forgotten something in the past ? But you can't remember what is going on in the past right ?
                             <br/><br/>
                             So I made this web app to keep track of what you doing in a day.
@@ -195,7 +195,7 @@ export default function Timeline(props: any){
                 <CallToAction />
                 <Footer />
 
-            </motion.main>
+            </m.main>
         </AnimatePresence>
     )
 }

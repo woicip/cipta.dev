@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, motion, AnimatePresence } from "framer-motion";
 
 // components
 import Project from "@/components/Projects/Project";
@@ -21,7 +21,7 @@ import tailwind from '@/assets/techs/tailwindcss.svg'
 
 export default function Index(){
     return (
-        <motion.main 
+        <m.main 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.6 }}
@@ -40,9 +40,9 @@ export default function Index(){
             <AnimatePresence>
                 <main className="mt-[100px]">
                     <div className={HeadlineContainer}>
-                        <motion.h1 transition={{ duration: 1.5, ease: [0.6, 0.01, -0.05, 0.9] }} layoutId="headline" className="text-[40px] laptopS:text-[34px]">
+                        <m.h1 transition={{ duration: 1.5, ease: [0.6, 0.01, -0.05, 0.9] }} layoutId="headline" className="text-[40px] laptopS:text-[34px]">
                             Passionate Full Stack <br className="mobileL:hidden" />Developer.
-                        </motion.h1>
+                        </m.h1>
 
                         <div className="tabletL:mt-[30px] mobileL:mt-[20px]">
                             <p className="text-[16px] leading-loose tabletM:text-[15.5px]">
@@ -52,14 +52,14 @@ export default function Index(){
                                 Based in Indonesia.
                             </p>
 
-                            <motion.button 
+                            <m.button 
                                 whileTap={{ scale: 0.8 }}
                                 transition={{ duration: 0.1, type: "spring" }} 
                                 className="w-fit mt-[20px] py-[7px] px-[10px] flex items-center rounded-xl hover:bg-[#f0f0f0] transition-all cursor-pointer"
                                 onClick={() => window.location.href = "#ready?"}>
                                 <Image src={ctaIcon} alt="icon" />
                                 <span className="ml-[10px] font-normal">Let's Talk</span>
-                            </motion.button>
+                            </m.button>
                         </div>
                     </div>
 
@@ -95,6 +95,6 @@ export default function Index(){
                     <Footer />
                 </main>
              </AnimatePresence>
-        </motion.main>
+        </m.main>
     )
 }

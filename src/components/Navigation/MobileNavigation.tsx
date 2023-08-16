@@ -23,13 +23,13 @@ export default function MobileNavigation(props: any){
         <AnimatePresence>
             { openMenu && (
                     <>
-                        <div className="bg-black/30 w-full h-screen fixed top-0 z-20 hidden tabletM:block transition-all"></div>
+                        <div className="bg-black/30 w-full h-screen fixed top-0 z-[90] hidden tabletM:block transition-all"></div>
                         <motion.div
                             initial={{ y: 500 }}
                             animate={{ y: 0 }}
                             exit={{ y: 500 }}
                             transition={{ duration: 0.4, type: "easeInOut", ease: [0.04, 0.62, 0.23, 0.98] }}
-                            className="hidden w-full h-fit py-[30px] bg-white rounded-t-[40px] fixed bottom-0 z-30 tabletM:block">
+                            className="hidden w-full h-fit py-[30px] bg-white rounded-t-[40px] fixed bottom-0 z-[100] tabletM:block">
 
                             <div className="px-[30px] flex items-center justify-between">
                                 <div className="flex items-start">

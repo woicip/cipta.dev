@@ -8,6 +8,7 @@ import {
 import React from 'react'
 import classNames from 'classnames'
 import useDiscussStore from '@/store/useDiscussStore'
+import { LazyMotion, domAnimation } from "framer-motion"
 
 // components
 import Loader from '@/components/Loader'
@@ -26,19 +27,21 @@ export default function App({ Component, pageProps }: AppProps) {
   const containerStyle = classNames(`w-full`)
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-          { loader ? 
-            <Loader setLoader={setLoader} />
-            :
-            <div className={containerStyle}>
-              <DiscussProject openDiscuss={openDiscuss} setOpenDiscuss={setOpenDiscuss} />
-              <MobileNavigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
-              <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
-              <Component {...pageProps} />
-            </div>
-          }
-      </Hydrate>
-    </QueryClientProvider>
+    <LazyMotion features={domAnimation}>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+            { loader ? 
+              <Loader setLoader={setLoader} />
+              :
+              <div className={containerStyle}>
+                <DiscussProject openDiscuss={openDiscuss} setOpenDiscuss={setOpenDiscuss} />
+                <MobileNavigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
+                <Navigation openMenu={openMenu} setOpenMenu={setOpenMenu} />
+                <Component {...pageProps} />
+              </div>
+            }
+        </Hydrate>
+      </QueryClientProvider>
+    </LazyMotion>
   )
 }

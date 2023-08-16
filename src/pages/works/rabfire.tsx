@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
-import { motion, AnimatePresence } from 'framer-motion'
+import { m, motion, AnimatePresence } from 'framer-motion'
 
 // assets
 import ctaIcon from '@/assets/icons/cta.svg'
@@ -24,7 +24,7 @@ import HeadlineContainer from "@/components/Works/HeadlineContainer"
 export default function Rabfire(props: any){
     return (
         <AnimatePresence>
-            <motion.section
+            <m.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ export default function Rabfire(props: any){
                             <p className="mt-[5px] tabletM:text-[15px]">Feb ~ Jun 2023</p>
                         </div>
 
-                        <motion.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all overflow-hidden">
+                        <m.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all overflow-hidden">
                             <Link href="https://social.rabfire.com" target="_blank">
                                 <p className="font-light text-[15px]">WWW</p>
                                 <div className="mt-[5px] flex items-center">
@@ -72,15 +72,15 @@ export default function Rabfire(props: any){
                                     <p className="ml-[6px] tabletM:text-[15px]">social.rabfire.com</p>
                                 </div>
                             </Link>
-                        </motion.div>
+                        </m.div>
                     </DetailContainer>
 
                     <ImageHighlight layoutId="rabfire">
-                        <motion.div className="py-[15px] px-[20px] mobileL:px-[15px] mobileL:py-[10px] rounded-full absolute top-[20px] left-[20px] mobileL:top-[15px] mobileL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
+                        <m.div className="py-[15px] px-[20px] mobileL:px-[15px] mobileL:py-[10px] rounded-full absolute top-[20px] left-[20px] mobileL:top-[15px] mobileL:left-[15px] z-10 flex items-center bg-white/30 backdrop-blur-lg border border-white/20">
                             <Image src={next} alt="icon" className="w-[20px] mr-[20px]" />
                             <Image src={redux} alt="icon" className="w-[20px] mr-[20px]" />
                             <Image src={tailwind} alt="icon" className="w-[20px]" />
-                        </motion.div>
+                        </m.div>
 
                         <Image src={rabfireThumbnail} alt="thumbnail" />
                     </ImageHighlight>
@@ -127,7 +127,7 @@ export default function Rabfire(props: any){
 
                 <CallToAction />
                 <Footer />
-            </motion.section>
+            </m.section>
         </AnimatePresence>
     )
 }
