@@ -16,7 +16,7 @@ export default function Footer(props: any){
                     <div className="w-full tabletM:flex tabletM:items-center tabletM:justify-between">
                         <div className="h-full">
                             <Image src={logoBlack} alt="logo" />
-                            <p className="mt-[15px] text-[15px] text-[#8A8A8A] tabletM:text-[14px] mobileL:text-[13px]">Passionate Full Stack <br/> Designer</p>
+                            <p className="mt-[15px] text-[15px] text-[#8A8A8A] tabletM:text-[14px] mobileL:text-[13px]">Passionate Full Stack <br/> Developer</p>
                         </div>
 
                         <p className="text-[13px] mt-[45px] text-[#8A8A8A] hidden mobileL:block text-left">

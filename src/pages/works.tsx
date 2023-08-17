@@ -72,7 +72,7 @@ export default function Timeline(props: any){
                 <div className="mt-[100px]">
                     <div className={HeadlineContainer}>
                         <div>
-                            <h1 className="text-[40px] laptopS:text-[34px]">Code & Design<br/>Works.</h1>
+                            <h1 className="text-[40px] laptopS:text-[34px]">Curated<br/>Works.</h1>
                         </div>
 
                         <div className="tabletM:mt-[20px]">
@@ -87,12 +87,12 @@ export default function Timeline(props: any){
                         <m.div className="w-fit mobileL:w-full p-[10px] rounded-full bg-[#f7f7f7] grid grid-cols-2 gap-[10px] mobileL:gap-0">
                             <m.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-50 mobileL:text-[14px]`} onClick={() => setType('website')}>
                                 Website
-                                { type === 'website' && <motion.button layoutId="type" className={`w-full absolute left-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('website')}>Website</motion.button> }
+                                { type === 'website' && <motion.button layout layoutId="type" className={`w-full absolute left-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('website')}>Website</motion.button> }
                             </m.div>
 
                             <m.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-10 mobileL:text-[14px]`} onClick={() => setType('apis')}>
                                 APIs
-                                { type === 'apis' && <motion.button layoutId="type" className={`w-full absolute right-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('apis')}>APIs</motion.button> }
+                                { type === 'apis' && <motion.button layout layoutId="type" className={`w-full absolute right-0 top-0 py-[10px] px-[15px] mobileL:px-[5px] text-transparent text-[15px] bg-black/5 rounded-full`} onClick={() => setType('apis')}>APIs</motion.button> }
                             </m.div>
 
                             {/* <motion.div className={`relative py-[10px] px-[15px] mobileL:px-[5px] text-center cursor-pointer mobileL:cursor-default text-[15px] text-black rounded-full z-10 mobileL:text-[14px]`} onClick={() => setType('opensource')}>
