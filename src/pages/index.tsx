@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { m, motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 // components
 import Project from "@/components/Projects/Project";
