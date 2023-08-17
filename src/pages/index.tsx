@@ -14,6 +14,8 @@ import HeadlineContainer from "@/styles/HeadlineContainer";
 import ctaIcon from '@/assets/icons/cta.svg'
 import rabfireThumbnail from '@/assets/projects/rabfire/rabfire-thumbnail.webp'
 import ascorpThumbnail from '@/assets/projects/ascorp/ascorp-thumbnail.webp'
+import danicomThumbnail from '@/assets/projects/danicom/thumbnail.webp'
+import imagynationThumbnail from '@/assets/projects/imagynation/thumbnail.webp'
 
 import next from '@/assets/techs/next-black.svg'
 import redux from '@/assets/techs/redux.svg'
@@ -66,6 +68,8 @@ export default function Index(){
                     <div className="px-[300px] pb-[100px] laptopL:px-[100px] laptopM:px-[100px] screen-1670px:px-[200px] screen-1170px:px-[300px] laptopS:px-[50px] laptop:px-[50px] grid grid-cols-2 gap-5 laptop:grid-cols-1 tabletL:py-[50px] tabletM:px-[30px] mobileL:px-[20px] mobileL:gap-[50px]">
                         <Project name="Rabfire" sub="Social media platform, 2023." work="Frontend" link="/works/rabfire" techs={[next, redux, tailwind]} thumbnail={rabfireThumbnail} layoutId="rabfire" />
                         <Project name="ASCORP" sub="Company Profile, 2022." work="Frontend" link="/works/ascorp" techs={[next, tailwind]} thumbnail={ascorpThumbnail} layoutId="ascorp" />
+                        <Project name="D'ANICOM" sub="Community Profile, 2023." work="Frontend" link="/works/danicom" techs={[next, tailwind]} thumbnail={danicomThumbnail} layoutId="danicom" />
+                        <Project name="IMAGYNATION API" sub="REST API, 2022." work="Fullstack" link="/works/imagynation" techs={[next, tailwind]} thumbnail={imagynationThumbnail} layoutId="imagynation" />
                     </div>
 
                     <div className="py-[150px] px-[300px] screen-1170px:px-[100px] laptopS:px-[50px] laptopS:py-[100px] tabletM:px-[30px] mobileL:px-[20px] flex flex-col items-center justify-center">

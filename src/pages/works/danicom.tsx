@@ -85,22 +85,15 @@ export default function Ascorp(props: any){
 
                     <HeadlineContainer>
                         <h1 className="text-[30px] leading-relaxed">
-                            Join us to connect, <br className="tabletM:hidden" />
-                            make friends, and dive into <br className="tabletM:hidden" />
+                            Join us to connect, <br className="tabletL:hidden" />
+                            make friends, and dive into <br className="tabletL:hidden" />
                             exciting Japanese activities together!
-                            {/* Swift, top-notch <br className="tabletM:hidden" />
-                            services for a seamless <br className="tabletM:hidden" />
-                            user experience. */}
                         </h1>
 
                         <p className="tabletL:mt-[30px] font-light leading-loose text-[18px]">
-                            Discover the vibrant world of D'ANICOM - where <br className="tabletM:hidden" />
-                            passion meets friendship! Join our Japanese <br className="tabletM:hidden" /> 
+                            Discover the vibrant world of D'ANICOM - where <br className="tabletL:hidden" />
+                            passion meets friendship! Join our Japanese <br className="tabletL:hidden" /> 
                             hobbyist community based in Depok, West Java.
-                            {/* We are a dynamic creative agency offering <br className="tabletM:hidden" />
-                            a wide range of services including music <br className="tabletM:hidden"/>
-                            production, event coordination, artist <br className="tabletM:hidden"/>
-                            management, and multimedia solutions. */}
                         </p>
                     </HeadlineContainer>
 
@@ -110,18 +103,17 @@ export default function Ascorp(props: any){
                     </SecondaryImages>
 
                     <HeadlineContainer>
-                        <h1 className="text-[30px] leading-relaxed">
-                            Development <br/>
+                        <h1 className=" text-[30px] leading-relaxed">
+                            The Development <br/>
                             Process.
                         </h1>
 
-                        <p className="w-[400px] tabletL:w-full tabletL:mt-[30px] text-[16px] font-normal leading-loose">
+                        <p className="w-[400px] laptop:w-full tabletL:mt-[30px] text-[16px] font-normal leading-loose">
                             I&apos;m developing and maintaining D'Anicom website using Next.js, Tailwind
                             CSS and Strapi (Headless CMS)
                             <br/><br/>
                             Crafting together the UX & UI blueprint with D'Anicom core members, ensuring a seamless transition from design to code. 
-                            Inspired by the captivating Dark Theme of Indodax Mobile App, 
-                            our color palette revolves around a delightful shade of blue.
+                            The design took minimalist and clean approaches to give the best experience when browsing the website
                             <br/><br/>
                             Powered by Next.js, my coding tech stack ensures optimal 
                             SEO performance, making it an excellent choice for websites 

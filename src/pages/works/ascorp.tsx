@@ -107,13 +107,13 @@ export default function Ascorp(props: any){
                     </SecondaryImages>
 
                     <HeadlineContainer>
-                        <h1 className="text-[30px] leading-relaxed">
-                            Development <br/>
+                        <h1 className="sticky top-[80px] tabletL:static text-[30px] leading-relaxed">
+                            The Development <br/>
                             Process.
                         </h1>
 
-                        <p className="w-[400px] tabletL:w-full tabletL:mt-[30px] text-[16px] font-normal leading-loose">
-                            I’m developing and maintaining this project with Next.js, Tailwind
+                        <p className="w-[400px] laptop:w-full tabletL:mt-[30px] text-[16px] font-normal leading-loose">
+                            I&apos;m developing and maintaining this project with Next.js, Tailwind
                             CSS and Express.js
                             <br/><br/>
                             Crafting the UX & UI blueprint with precision and stunning 
