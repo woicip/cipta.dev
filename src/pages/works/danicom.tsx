@@ -64,11 +64,11 @@ export default function Ascorp(props: any){
                         </div>
 
                         <m.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all">
-                            <Link href="https://danicom.vercel.app" target="_blank">
+                            <Link href="https://deanicom.com" target="_blank">
                                 <p className="font-light text-[15px]">WWW</p>
                                 <div className="mt-[5px] flex items-center">
                                     <Image src={ctaIcon} alt="ctaIcon" className="w-[16px]" />
-                                    <p className="ml-[6px] tabletM:text-[15px]">danicom.vercel.app</p>
+                                    <p className="ml-[6px] tabletM:text-[15px]">deanicom.com</p>
                                 </div>
                             </Link>
                         </m.div>

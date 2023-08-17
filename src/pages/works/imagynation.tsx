@@ -23,7 +23,7 @@ import Project from "@/components/Projects/Project"
 
 export default function Ascorp(props: any){
     return (
-        <AnimatePresence>
+        <AnimatePresence >
             <m.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -65,9 +65,9 @@ export default function Ascorp(props: any){
                         <m.div className="text-left py-[10px] px-[13px] tabletL:px-0 hover:bg-[#f3f3f3] tabletL:hover:bg-transparent rounded-2xl transition-all">
                             <Link href="https://imagynation.vercel.app" target="_blank">
                                 <p className="font-light text-[15px]">WWW</p>
-                                <div className="mt-[5px] flex items-center">
+                                <div className="mt-[5px] flex items-center overflow-auto">
                                     <Image src={ctaIcon} alt="ctaIcon" className="w-[16px]" />
-                                    <p className="ml-[6px] tabletM:text-[15px]">imagynation.vercel.app</p>
+                                    <p className="ml-[6px] tabletM:text-[15px] break-words">imagynation.vercel.app</p>
                                 </div>
                             </Link>
                         </m.div>
