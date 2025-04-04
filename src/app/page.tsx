@@ -3,7 +3,6 @@ import { DownloadIcon, GithubIcon, TwitterIcon } from "lucide-react";
 import { PropsWithChildren } from "react";
 
 // Assets
-import xtwitterLogo from "@/assets/x-black.png"
 import ciptaLogo from "@/assets/cipta-emblem-black.webp"
 import Link from "next/link";
 
