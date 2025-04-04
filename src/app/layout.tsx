@@ -10,6 +10,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Cipta",
   description: "Passionate Fullstack Developer",
+  openGraph: {
+    images: ['/imageog.png']
+  },
+  twitter: {
+    images: ['/imageog.png']
+  }
 };
 
 export default function RootLayout({
