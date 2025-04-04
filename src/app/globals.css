@@ -12,6 +12,86 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* @theme {
+  --breakpoint-laptopXL: 1920px;
+  --breakpoint-laptopL: 1440px;
+  --breakpoint-laptopM: 1366px;
+  --breakpoint-laptopS: 1280px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tabletL: 820px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-tabletM: 640px;
+  --breakpoint-mobileL: 425px;
+  --breakpoint-mobileM: 375px;
+  --breakpoint-mobileS: 320px;
+} */
+
+@custom-variant laptopXl {
+  @media (max-width: 1920px) {
+    @slot;
+  }
+}
+
+@custom-variant laptopL {
+  @media (max-width: 1440px) {
+    @slot;
+  }
+}
+
+@custom-variant laptopM {
+  @media (max-width: 1366px) {
+    @slot;
+  }
+}
+
+@custom-variant laptopS {
+  @media (max-width: 1280px) {
+    @slot;
+  }
+}
+
+@custom-variant laptop {
+  @media (max-width: 1024px) {
+    @slot;
+  }
+}
+
+@custom-variant tabletL {
+  @media (max-width: 820px) {
+    @slot;
+  }
+}
+
+@custom-variant tablet {
+  @media (max-width: 768px) {
+    @slot;
+  }
+}
+
+@custom-variant tabletM {
+  @media (max-width: 640px) {
+    @slot;
+  }
+}
+
+@custom-variant mobileL {
+  @media (max-width: 425px) {
+    @slot;
+  }
+}
+
+@custom-variant mobileM {
+  @media (max-width: 375px) {
+    @slot;
+  }
+}
+
+@custom-variant mobileS {
+  @media (max-width: 320px) {
+    @slot;
+  }
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
