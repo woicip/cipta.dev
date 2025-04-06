@@ -35,7 +35,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col gap-[0px] items-center justify-center">
           <h1 className="w-full text-[#191919] text-[50px] mobileL:text-3xl leading-tight font-bold relative left-0">
-            Full Stack Developer
+            Passionate Developer
           </h1>
           <h1 className="w-full text-[#B8B8B8] text-[50px] mobileL:text-3xl leading-tight font-semibold text-right relative left-[50px] tablet:left-0">
             UI/UX Designer
